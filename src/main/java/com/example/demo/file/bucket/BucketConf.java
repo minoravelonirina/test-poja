@@ -11,14 +11,15 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.presigner.S3Presigner;
 import software.amazon.awssdk.transfer.s3.S3TransferManager;
 
+@Getter
 @PojaGenerated
 @Configuration
 public class BucketConf {
 
-  @Getter private final String bucketName;
-  @Getter private final S3TransferManager s3TransferManager;
-  @Getter private final S3Presigner s3Presigner;
-  @Getter private final S3Client s3Client;
+  private final String bucketName;
+  private final S3TransferManager s3TransferManager;
+  private final S3Presigner s3Presigner;
+  private final S3Client s3Client;
 
   @SneakyThrows
   public BucketConf(
